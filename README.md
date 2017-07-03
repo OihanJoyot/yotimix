@@ -5,7 +5,7 @@ Yotimix is a python software used to select the default audio device and its pro
 others.
 
 # Requirements
-| Plugin | README |
+| Software | URL |
 | ------ | ------ |
 | Python3 | https://www.python.org/ |
 | amixer| https://www.alsa-project.org/main/index.php/Main_Page |
