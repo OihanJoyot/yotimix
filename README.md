@@ -5,11 +5,11 @@ Yotimix is a python software used to select the default audio device and its pro
 others.
 
 # Requirements
-
+| Plugin | README |
 | ------ | ------ |
 | Python3 | https://www.python.org/ |
 | amixer| https://www.alsa-project.org/main/index.php/Main_Page |
 | PulseAudio (pacmd) | https://www.freedesktop.org/wiki/Software/PulseAudio/ |
 | pyQt5 | https://www.riverbankcomputing.com/software/pyqt/ |
 | python_subprocess | https://docs.python.org/3.6/library/subprocess.html#module-subprocess |
-| ------ | ------ |
+
