@@ -34,8 +34,8 @@ $ apt-get install python3-ptyprocess
 # Files
 | Name | Target |
 | ------ | ------ |
-| main.py | Main program: To run the sofware execute ```$ $ python3 main.py``` |
+| main.py | Main program: To run the sofware execute ```$ python3 main.py``` |
 | script.py | Library of the essential fonctions of the program|
-| ui_mainwindow | Libray to build the QWidgets in the window (generate by QtCreator and pyuic|
+| ui_mainwindow | Libray to build the QWidgets in the window (generate by QtCreator and pyuic)|
 | cmdolume.sh | Storage of a bash command executed by subprocess |
 
