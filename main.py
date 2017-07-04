@@ -73,7 +73,7 @@ class Yotimix(QMainWindow, QWidget, QThread, Ui_MainWindow, Cmd):
         self._activegetV = False
         _v = self.volumeSlider.sliderPosition()
         self.statusBar.showMessage("amixer --quiet -D pulse sset Master "+ str(_v)+"%", 2000)
-        subprocess.call(["amixer", "--quiet", "-D", "pulse", "sset", "Master", str(_v)+"%"])
+        subprocess.call(["amixer", "--quiet", "sset", "Master", str(_v)+"%"])
 
 
 class VolumeThread(QThread):
