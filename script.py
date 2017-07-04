@@ -1,4 +1,4 @@
-import subprocess
+import subprocess, time
 
 
 class Decode:
@@ -44,14 +44,17 @@ class Cmd(Decode):
         self.device = _dev
         self.profile = _prof
 
-    def set_dev_as_def(self):
-        subprocess.call(["pacmd", "set-default-sink %s" % (self.inputC[self.device][1])])
+    # def set_dev_as_def(self):
+    #     for _card in self.inputC:
+    #         subprocess.call(["pacmd", "set-card-profile %s %s" % (_card[1], _card[2][0])])
+    #     time.sleep(0.02)
+    #     subprocess.call(["pacmd", "set-default-sink %s" % (self.inputC[self.device][1])])
 
     def set_profiles(self):
         for _card in self.inputC:
             subprocess.call(["pacmd", "set-card-profile %s off" % (_card[1])])
         subprocess.call(["pacmd", "set-card-profile %s %s" % (self.inputC[self.device][1], self.inputC[self.device][2][self.profile])])
-
+        return "pacmd set-card-profile %s %s" % (self.inputC[self.device][1], self.inputC[self.device][2][self.profile])
 
 def main():
     pass
