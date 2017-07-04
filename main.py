@@ -29,7 +29,6 @@ class Yotimix(QMainWindow, QWidget, QThread, Ui_MainWindow, Cmd):
         self.volume_thread = VolumeThread()
         self.volume_thread.connect(self)
         self.volume_thread.start()
-        # self.volume_thread.trigger.connect(self.mythread.loop, SIGNAL("CurrentVolume"),self)
 
     def load_devices(self):
         _i = 0
@@ -76,19 +75,12 @@ class Yotimix(QMainWindow, QWidget, QThread, Ui_MainWindow, Cmd):
         self.statusBar.showMessage("amixer --quiet -D pulse sset Master "+ str(_v)+"%", 2000)
         subprocess.call(["amixer", "--quiet", "-D", "pulse", "sset", "Master", str(_v)+"%"])
 
-    # def runLoop(self):
-    #     from time import sleep
-    #     for index in range(100):
-    #         sleep(0.5)
-    #         self.volume(follow = 1)
-    #         qApp.processEvents()
 
 class VolumeThread(QThread):
     trigger = pyqtSignal(int)
 
     def __init__(self, parent=None):
         super(VolumeThread, self).__init__(parent)
-        #self.yotimix = Yotimix()
 
     def connect(self,yotimix):
         self.trigger.connect(yotimix.getVolume)
