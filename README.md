@@ -5,7 +5,7 @@
 Yotimix is a python software used to select the default audio device and its profile. It should be compatible with bluetooth devices even if other mixers don't work. Actually, in addition to set the audio card as default device, the program desactivate the 
 others.
 
-[![N|Solid](http://hpics.li/0936457)](https://nodesource.com/products/nsolid)
+
 
 # Requirements
 | Software | URL |
