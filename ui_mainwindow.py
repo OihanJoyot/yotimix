@@ -8,13 +8,16 @@
 
 from PyQt5 import QtCore, QtGui, QtWidgets
 
+
 class Ui_MainWindow(object):
+
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
         MainWindow.resize(450, 470)
         MainWindow.setMinimumSize(QtCore.QSize(450, 470))
         icon = QtGui.QIcon()
-        icon.addPixmap(QtGui.QPixmap("ressources/audio-card.svg"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon.addPixmap(QtGui.QPixmap("ressources/audio-card.svg"),
+                       QtGui.QIcon.Normal, QtGui.QIcon.Off)
         MainWindow.setWindowIcon(icon)
         self.centralWidget = QtWidgets.QWidget(MainWindow)
         self.centralWidget.setObjectName("centralWidget")
@@ -41,7 +44,8 @@ class Ui_MainWindow(object):
         self.reloadButton = QtWidgets.QPushButton(self.centralWidget)
         self.reloadButton.setText("")
         icon1 = QtGui.QIcon()
-        icon1.addPixmap(QtGui.QPixmap("ressources/view-refresh.svg"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon1.addPixmap(QtGui.QPixmap("ressources/view-refresh.svg"),
+                        QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.reloadButton.setIcon(icon1)
         self.reloadButton.setIconSize(QtCore.QSize(32, 32))
         self.reloadButton.setObjectName("reloadButton")
@@ -55,7 +59,8 @@ class Ui_MainWindow(object):
         self.volumeSlider.setObjectName("volumeSlider")
         self.horizontalLayout_2.addWidget(self.volumeSlider)
         self.buttonBox = QtWidgets.QDialogButtonBox(self.centralWidget)
-        self.buttonBox.setStandardButtons(QtWidgets.QDialogButtonBox.Cancel|QtWidgets.QDialogButtonBox.Ok)
+        self.buttonBox.setStandardButtons(
+            QtWidgets.QDialogButtonBox.Cancel | QtWidgets.QDialogButtonBox.Ok)
         self.buttonBox.setObjectName("buttonBox")
         self.horizontalLayout_2.addWidget(self.buttonBox)
         self.verticalLayout.addLayout(self.horizontalLayout_2)
@@ -69,5 +74,6 @@ class Ui_MainWindow(object):
 
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
-        MainWindow.setWindowTitle(_translate("MainWindow", "Yotimix - Choose device card"))
+        MainWindow.setWindowTitle(_translate(
+            "MainWindow", "Yotimix - Choose device card"))
         self.label.setText(_translate("MainWindow", "Volume:"))

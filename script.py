@@ -1,10 +1,8 @@
-import subprocess, time
+import subprocess
+import time
 
 
 class Decode:
-    #
-    # def __init__(self):
-    #     self.inputD = str(subprocess.check_output(['pacmd', 'list-cards']))
 
     def list_cards(self):
         self.inputD = str(subprocess.check_output(['pacmd', 'list-cards']))
@@ -38,26 +36,22 @@ class Decode:
 
 class Cmd(Decode):
 
-    def __init__(self, _dev = 0, _prof = 0):
+    def __init__(self, _dev=0, _prof=0):
         super().__init__()
         self.inputC = self.list_profiles()
         self.device = _dev
         self.profile = _prof
 
-    # def set_dev_as_def(self):
-    #     for _card in self.inputC:
-    #         subprocess.call(["pacmd", "set-card-profile %s %s" % (_card[1], _card[2][0])])
-    #     time.sleep(0.02)
-    #     subprocess.call(["pacmd", "set-default-sink %s" % (self.inputC[self.device][1])])
-
     def set_profiles(self):
         for _card in self.inputC:
             subprocess.call(["pacmd", "set-card-profile %s off" % (_card[1])])
-        subprocess.call(["pacmd", "set-card-profile %s %s" % (self.inputC[self.device][1], self.inputC[self.device][2][self.profile])])
+        subprocess.call(["pacmd", "set-card-profile %s %s" %
+                         (self.inputC[self.device][1], self.inputC[self.device][2][self.profile])])
         return "pacmd set-card-profile %s %s" % (self.inputC[self.device][1], self.inputC[self.device][2][self.profile])
+
 
 def main():
     pass
 
 if __name__ == "__Decode__" or __name__ == "Cmd":
-   main()
+    main()
