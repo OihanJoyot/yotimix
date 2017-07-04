@@ -23,3 +23,13 @@ $ apt-get install alsa-base
 $ apt-get install pulseaudio
 $ apt-get install pyqt5-dev
 $ apt-get install python3-ptyprocess
+```
+
+# Files
+| Name | Target |
+| ------ | ------ |
+| main.py | Main program: To run the sofware execute ```sh $ apt-get install python3``` |
+| amixer| https://www.alsa-project.org/main/index.php/Main_Page (may be installed)|
+| PulseAudio (pacmd) | https://www.freedesktop.org/wiki/Software/PulseAudio/ (may be installed)|
+| pyQt5 | https://www.riverbankcomputing.com/software/pyqt/ |
+| python_subprocess | https://docs.python.org/3.6/library/subprocess.html#module-subprocess |
